@@ -41,4 +41,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+////////////////////////////////////////
+//comment this out before deploying!!!!
+
+  // Start the server
+  // const server = app.listen(8080, () => {
+  //   const port = server.address().port;
+  //   console.log(`App listening on port ${port}`);
+  // });
+////////////////////////////////////////
+
 module.exports = app;
