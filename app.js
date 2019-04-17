@@ -45,10 +45,12 @@ app.use(function(err, req, res, next) {
 //comment this out before deploying!!!!
 
   // Start the server
-  // const server = app.listen(8080, () => {
-  //   const port = server.address().port;
-  //   console.log(`App listening on port ${port}`);
-  // });
+  if (process.env.NODE_ENV === 'dev'){
+    const server = app.listen(8080, () => {
+      const port = server.address().port;
+      console.log(`App listening on port ${port}`);
+    });
+  }
 ////////////////////////////////////////
 
 module.exports = app;
